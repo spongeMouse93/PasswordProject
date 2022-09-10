@@ -32,7 +32,7 @@ public class Password extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     int length = Integer.parseInt(tf.getText());
-                    if (length < 8 || length > 15) {
+                    if (length > 8 && length < 15) {
                         StringBuilder password = new StringBuilder("");
                         boolean n = false, u = false, s = false;
                         if (numbers.isSelected())
