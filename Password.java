@@ -10,11 +10,10 @@ public class Password extends JFrame {
         f.setSize(437, 300);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setVisible(true);
+        f.setResizable(false);
         f.setLayout(null);
-        JCheckBox upper = new JCheckBox("Include upper case letters?");
-        JCheckBox symbols = new JCheckBox("Add symbols?");
+        JCheckBox upper = new JCheckBox("Add upper case letters?"), symbols = new JCheckBox("Add symbols?"), numbers = new JCheckBox("Add numbers?");
         JButton generate = new JButton("Generate Password");
-        JCheckBox numbers = new JCheckBox("Add numbers?");
         JLabel jLength = new JLabel("Enter length (between 8 and 15): ");
         JTextField tf = new JTextField();
         jLength.setBounds(12, 57, 254, 20);
