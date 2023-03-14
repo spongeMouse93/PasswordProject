@@ -56,6 +56,8 @@ public class Password extends JFrame {
                         JOptionPane.showMessageDialog(f, "Password length must be between 8 and 15 characters", "Alert", JOPtionPane.WARNING_MESSAGE);
                 } catch (NumberFormatException ex) {
                     JOptionPane.showMessageDialog(f, "Please enter an integer", "Alert", JOPtionPane.WARNING_MESSAGE);
+                } catch (NullPointerException ex){
+                    JOptionPane.showMessageDialog(f, "Please enter an integer", "Alert", JOPtionPane.WARNING_MESSAGE);
                 }
             }
         });
