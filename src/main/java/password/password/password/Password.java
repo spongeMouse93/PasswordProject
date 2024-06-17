@@ -20,7 +20,7 @@ public class PasswordGenerator extends Application{
      */
     @Override
     public void start(Stage s) throws Exception{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("PasswordController.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("PasswordView.fxml"));
         Scene sc = new Scene((AnchorPane) loader.load(), 447, 415);
         s.setScene(sc);
         s.setTitle("Password Generator");
