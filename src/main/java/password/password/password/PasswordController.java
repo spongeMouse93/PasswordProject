@@ -74,12 +74,8 @@ public class PasswordController {
             return;
         }
         passLength.setDisable(true);
-        char[] pass = generatePassword(length, numbers.isSelected(), capital.isSelected(),
-                symbol.isSelected());
-        StringBuilder sb = new StringBuilder();
-        for (char c : pass)
-            sb.append(c);
-        password.setText(sb.toString());
+        password.setText(generatePassword(length, numbers.isSelected(), 
+                                          capital.isSelected(), symbol.isSelected()));
         reset.setDisable(false);
         copy.setDisable(false);
     }
@@ -123,11 +119,11 @@ public class PasswordController {
      * @param s if symbols are to be included
      * @return a password of the given length
      */
-    private char[] generatePassword(int length, boolean n, boolean u, boolean s) {
-        char[] pass = new char[length];
+    private String generatePassword(int length, boolean n, boolean u, boolean s) {
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < length; i++)
-            pass[i] = (char) randomGenerate(n, u, s);
-        return pass;
+            sb.append((char) randomGenerate(n, u, s));
+        return sb.toString();
     }
 
     /**
